@@ -1,15 +1,13 @@
-from setuptools import setup
+from distutils.core import setup
 
-APP = ['main.py']  # Replace 'main.py' with the entry point of your application
-DATA_FILES = []
-OPTIONS = {
-    'argv_emulation': True,
-    'packages': ['MyApp'],  # Adjust this to include your package(s)
-}
 
 setup(
-    app=APP,
-    data_files=DATA_FILES,
-    options={'py2app': OPTIONS},
-    setup_requires=['py2app'],
+    console=['main.py'],  # Replace with the name of your main Python script
+    options={
+        'py2exe': {
+            'packages': ['MyApp', 'MyApp.Backend', 'MyApp.DataBase', 'MyApp.GUI'],
+            'includes': [],  # List any additional modules you want to include
+        }
+    },
+    zipfile=None,
 )
