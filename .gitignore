@@ -1,0 +1,27 @@
+# Ignore virtual environment directories (e.g., venv, virtualenv, .venv)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore editor/IDE-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.suo
+*.user
+*.sln
+*.swp
+*.swo
+
+# Ignore operating system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore dependencies (e.g., Python packages, Node.js modules)
+# Adjust this section based on your project's requirements and dependencies
+# You can generate a requirements.txt file for Python projects and add it here
+# For Node.js projects, you can add node_modules/
+# For other languages, specify their dependency directories accordingly
+venv/
+node_modules/
